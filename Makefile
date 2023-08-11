@@ -10,6 +10,9 @@ SYMFONY_CONSOLE=$(PHP_DOCKER_COMPOSE_EXEC) bin/console
 start: ## Start docker container
 	$(DOCKER_COMPOSE) up -d
 
+build:
+	$(DOCKER_COMPOSE) up --build -d
+
 stop: ## Stop docker container
 	$(DOCKER_COMPOSE) stop
 
